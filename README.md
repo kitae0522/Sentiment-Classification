@@ -17,7 +17,7 @@
     -   여러 사이트를 돌아다니며 모은 문장 : (24,844 문장)
 
 # Network
-![](https://github.com/kitae0522/Sentiment-Classification/tree/main/resource/model_preview.png)
+![](https://github.com/kitae0522/Sentiment-Classification/blob/main/resource/model_preview.png)
 1. Embedding
 	- Vocab Size : 10,000
 	- Vector Size : 64
