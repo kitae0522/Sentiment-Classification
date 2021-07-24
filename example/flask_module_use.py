@@ -29,15 +29,15 @@ def main():
     req_text = json.loads(request.get_data())
     conn_papago = papago_api("https://openapi.naver.com/v1/papago/n2mt", req_text["text"])
 
-    if Model(conn_papago).predict() > 0.5:
+    if Model(conn_papago).predict()[-1] > 0.5:
         return jsonify({
-          "score" : str(Model(conn_papago).predict()),
+          "score" : str(Model(conn_papago).predict()[-1]),
           "res" : "positive",
           "translate" : conn_papago
         })
     else:
         return jsonify({
-          "score" : str(Model(conn_papago).predict()),
+          "score" : str(Model(conn_papago).predict()[-1]),
           "res" : "negative",
           "translate" : conn_papago
         })
